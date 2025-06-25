@@ -1,0 +1,14 @@
+CREATE TABLE notices (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    date DATE NOT NULL,
+    time TIME,
+    type ENUM('homework', 'others') NOT NULL,
+    faculty VARCHAR(100),
+    class VARCHAR(100),
+    homework_file VARCHAR(255),
+    created_by INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
